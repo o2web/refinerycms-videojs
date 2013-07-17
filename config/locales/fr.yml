@@ -1,0 +1,78 @@
+fr:
+  wym_tools:
+    add_video: Ajouter une Vidéo 
+  refinery:
+    admin:
+      dashboard:
+        additional_dashboard_menu_items:
+          create_new: Ajouter une Vidéo
+    plugins:
+      videos:
+        title: Vidéos
+    videos:
+      admin:
+        videos:
+          actions:
+            create_new: Ajouter une Vidéo
+            reorder: Réordonner les Vidéos
+            reorder_done: Terminer
+          records:
+            title: Vidéos
+            sorry_no_results: Désolé! Il y a pas de résultat à votre recherche
+            no_items_yet: Il y a pas de vidéo pour le moment. Click "Ajouter une Vidé" afin d'ajouter la premiere vidéo,
+          video:
+            view_live_html: Voir cette vidéo live <br/><em>(ouvre une fenêtre)</em>
+            edit: Modifier vidéo
+            delete: Supprimer définitivement la vidéo 
+            file: Fichier
+            link: LIen
+            shared_source: Embedded
+          new:
+            use_files: Utiliser un fichier
+            use_embedded_video: Utiliser un embedded vidéo
+          form:
+            title: Titre
+            poster: Poster
+            width: Largeur
+            height: Hauteur
+          file_fields:
+            files: Fichiers
+            file_tip: Ajouters fichiers (ou liens de fichiers) de type 'mp4', 'webm', 'flv', 'ogg' pour une meilleur compatibilité
+            use_file: Utiliser un fichier
+            use_external_source: Utiliser une source externe
+            add_file: Ajouter le fichier
+            add_source: Ajouter source
+            delete_source: Supprimer source
+            link_to_source: Lien vers la source
+            download_current: Utiliser la vidéo courante
+            or: ou
+            replace: remplace avec celà
+            maximum_file_size: "Taille Max.: %{bytes}"
+          new_file_field:
+            use_file: Utiliser le fichier
+            use_external_source: Utiliser une source externe
+            add_file: Ajouter fichier
+            add_source: Ajouter source
+            delete_source: Supprimer source
+          embed_video_fields:
+            copy_embed_tag_here: Copier HTML ici
+          form_option_fields:
+            options: Options
+            autoplay: Lecture automatique
+            show_ontrols: Affichage de la bar de controle
+            preload_video: Précharge la vidéo
+            loop_video: Vidéo en boucle
+          insert:
+            insert: Insérer
+          preview_form:
+            width: Largeur
+            height: Hauteur
+      vidéos:
+        show:
+          other: Autres Vidéos
+  activerecord:
+    attributes:
+      'refinery/videos/video':
+        file_name: Nom du fichier
+        file_size: Taille du fichier
+        file_ext: Fichier Externe

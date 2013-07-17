@@ -19,8 +19,8 @@ module Refinery
       ################## Video config options
       serialize :config, Hash
       CONFIG_OPTIONS = {
-          :autoplay => "false", :width => "400", :height => "300",
-          :controls => "true", :preload => "true", :loop => "true"
+          :autoplay => "false", :width => "300", :height => "200",
+          :controls => "true", :preload => "false", :loop => "false"
       }
 
       attr_accessible :title, :poster_id, :video_files_attributes,
@@ -45,7 +45,7 @@ module Refinery
       def to_html
         if use_shared
           update_from_config
-          return embed_tag.html_safe
+          return wrap_embed_tag_safe
         end
 
         data_setup = []
@@ -59,14 +59,18 @@ module Refinery
         sources = []
         video_files.each do |file|
           if file.use_external
-            sources << ["<source src='#{file.external_url}' type='#{file.file_mime_type}'/>"]
+            sources << ["<source src=\"#{file.external_url}\" type=\"#{file.file_mime_type}\"/>"]
           else
-            sources << ["<source src='#{file.url}' type='#{file.file_mime_type}'/>"]
+            sources << ["<source src=\"#{file.url}\" type=\"#{file.file_mime_type}\"/>"]
           end if file.exist?
         end
-        html = %Q{<video id="video_#{self.id}" class="video-js #{Refinery::Videos.skin_css_class}" width="#{config[:width]}" height="#{config[:height]}" data-setup=' {#{data_setup.join(',')}}'>#{sources.join}</video>}
+        html = %Q{<div class="video_embeded"><video id="video_#{self.id}" class="video-js #{Refinery::Videos.skin_css_class}" width="#{config[:width]}" height="#{config[:height]}">#{sources.join}</video></div>}
 
         html.html_safe
+      end
+
+      def wrap_embed_tag_safe
+        ('<div class="video_embeded">' + embed_tag + '</div>').html_safe
       end
 
 
