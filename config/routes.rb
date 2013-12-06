@@ -1,6 +1,5 @@
 Refinery::Core::Engine.routes.append do
   get '/system/videos/*dragonfly' => Dragonfly[:refinery_videos]
-  post '/system/videos/*dragonfly' => Dragonfly[:refinery_videos]
 
   # Frontend routes
   namespace :videos do
