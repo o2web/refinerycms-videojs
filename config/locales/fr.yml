@@ -19,13 +19,13 @@ fr:
           records:
             title: Vidéos
             sorry_no_results: Désolé! Il y a pas de résultat à votre recherche
-            no_items_yet: Il y a pas de vidéo pour le moment. Click "Ajouter une Vidé" afin d'ajouter la premiere vidéo,
+            no_items_yet: Il y a pas de vidéo pour le moment. Click "Ajouter une Vidéo" afin d'ajouter la premiere vidéo,
           video:
             view_live_html: Voir cette vidéo live <br/><em>(ouvre une fenêtre)</em>
             edit: Modifier vidéo
             delete: Supprimer définitivement la vidéo 
             file: Fichier
-            link: LIen
+            link: Lien
             shared_source: Embedded
           new:
             use_files: Utiliser un fichier
